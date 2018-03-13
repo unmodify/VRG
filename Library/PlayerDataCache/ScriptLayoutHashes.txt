@@ -20,6 +20,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 c08b196716247885d3b27f7f282b2568 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ImageEffectBase
 7ba1e84ad3d2d8813486668e75f842ce Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ParticleSystemMultiplier
+57cf4d6da5bedfd46960b2eb4ae64778 Assembly-CSharp.dll:.EnemySpawner
 a30beadf4d109f44144b9a9f42e61cbf Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BlurOptimized
 0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.AICharacterControl
 f22357a629948725163e0f7da117fe9b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.FirstPerson.FirstPersonController
@@ -102,6 +103,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CameraLock
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Vehicles.Ball.BallUserControl
 f41c5222aaa4557bb9cafa1c24b37a94 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Cameras.AutoCam
 71778c9b45c50a65b865c5bc42204043 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
@@ -309,4 +311,3 @@ b2945430dfd6bbdb5d77043b47bf85e7 Assembly-CSharp.dll:.GvrControllerReticleVisual
 d885ad79a6ef5bfe2ce10637aac0b8a0 Assembly-CSharp.dll:GoogleVR.VideoDemo.AutoPlayVideo
 a412f64ff4e4667098f82b7fa0bf56e2 Assembly-CSharp-firstpass.dll:UnityStandardAssets._2D.PlatformerCharacter2D
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-57cf4d6da5bedfd46960b2eb4ae64778 Assembly-CSharp.dll:.EnemySpawner
