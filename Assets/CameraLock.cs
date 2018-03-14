@@ -7,16 +7,19 @@ public class CameraLock : NetworkBehaviour {
 
 	Camera playerCamera;
     public int tag =  13;
-	public Vector3 offset  = new Vector3(0.17f, 2.36f, 3.94f);
+	public float offset  = 10f;
+    float xTilt = 22f;
 
 	void Start(){
 		playerCamera = transform.GetChild (4).GetComponent<Camera> ();
+
 	}
 
 	void Update(){
-		playerCamera.transform.position = transform.position + offset;
+		playerCamera.transform.position = transform.position + transform.forward * -offset;
+        playerCamera.transform.position += new Vector3(0, 4, 0);
         Vector3 playerRotation = transform.rotation.ToEulerAngles();
-		playerCamera.transform.rotation = Quaternion.EulerAngles(22.08f, playerRotation.y ,playerRotation.z);
+		playerCamera.transform.rotation = Quaternion.EulerAngles((playerRotation.x+xTilt)/360f*2f*Mathf.PI, playerRotation.y , playerRotation.z );
 //		offset = new Vector3(0.17f, 2.36f, 394f);
 //		GetComponent<Transform>().position = GetComponentInParent<Transform>().position + offset;
 
