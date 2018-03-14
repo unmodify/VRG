@@ -159,6 +159,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
      <Compile Include="Assets\Health.cs" />
+     <Compile Include="Assets\Notes\notes.cs" />
      <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\prj1\Scripts\Spin.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
