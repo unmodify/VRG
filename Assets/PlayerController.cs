@@ -8,7 +8,7 @@ public class PlayerController : NetworkBehaviour{
     public Transform bulletSpawn;
     // Use this for initialization
     void Start () {
-		
+        GetComponent<Rigidbody>().freezeRotation = true;
 	}
 	
 	// Update is called once per frame
@@ -18,10 +18,11 @@ public class PlayerController : NetworkBehaviour{
             return;
         }
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 30.0f;
 
         transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
+        //transform.Translate(0, 0, z);
+        GetComponent<Rigidbody>().velocity = GetComponent<Transform>().forward* z;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
