@@ -39,6 +39,7 @@ public class PlayerController : NetworkBehaviour{
             bulletPrefab,
             bulletSpawn.position,
             bulletSpawn.rotation);
+        bullet.GetComponent<Rigidbody>().angularVelocity = 5f*bulletSpawn.GetComponent<Transform>().right;
 
         // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6;
