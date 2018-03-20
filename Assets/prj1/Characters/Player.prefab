@@ -148,7 +148,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4861560619993780}
-  - component: {fileID: 54225763383955472}
   m_Layer: 0
   m_Name: Axe 2
   m_TagString: Untagged
@@ -294,7 +293,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1613083484268786}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.56299996, y: -0.86800003, z: 0.26999998}
+  m_LocalPosition: {x: -0.611, y: -0.86800003, z: 0.26999998}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4086828809902726}
@@ -567,21 +566,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247032481621164}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54225763383955472
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1613083484268786}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &54814749538370684
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -617,7 +601,7 @@ BoxCollider:
   m_GameObject: {fileID: 1839262578831160}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.005802924, y: 0.015061454, z: 0.035319876}
   m_Center: {x: 5.4130016e-16, y: 0.013848658, z: -0.0008637816}
@@ -629,7 +613,7 @@ BoxCollider:
   m_GameObject: {fileID: 1730936796165344}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.016652929, y: 0.042308215, z: 0.031483922}
   m_Center: {x: -5.948543e-16, y: -0.013487008, z: -0.00034947126}
@@ -850,7 +834,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1152672368862356}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.016939437
   m_Height: 0.18883684
   m_Direction: 2

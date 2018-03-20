@@ -6,8 +6,8 @@ using UnityEngine.Networking;
 public class CameraLock : NetworkBehaviour {
 
 	Camera playerCamera;
-    public const int tag =  14;
-	public float offset  = 10f;
+    public const int tag =  15;
+	float offset  = 1.5f;
     float xTilt = 22f;
 
 	void Start(){
@@ -32,7 +32,7 @@ public class CameraLock : NetworkBehaviour {
         if (isLocalPlayer)
         {
             playerCamera.transform.position = transform.position + transform.forward * -offset;
-            playerCamera.transform.position += new Vector3(0, 4, 0);
+            playerCamera.transform.position += new Vector3(0, 2, 0);
             Vector3 playerRotation = transform.rotation.ToEulerAngles();
             playerCamera.transform.rotation = Quaternion.EulerAngles((playerRotation.x + xTilt) / 360f * 2f * Mathf.PI, playerRotation.y, playerRotation.z);
             //		offset = new Vector3(0.17f, 2.36f, 394f);

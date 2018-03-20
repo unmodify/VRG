@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-
+    
     void OnCollisionEnter(Collision theCollision)
     {
         var hit = theCollision.gameObject;
@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour {
         {
             health.TakeDamage(10);
         }
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
 // Use this for initialization
