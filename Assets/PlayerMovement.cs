@@ -5,9 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 	float dXmin,dYmin,dZmin;
 	float dXmax,dYmax,dZmax;
+
+	public float playerSpeed = 10;
+	public GameObject player;
+
 	// Use this for initialization
 	void Start () {
-			
+
 	}
 	
 	// Update is called once per frame
@@ -47,6 +51,22 @@ public class PlayerMovement : MonoBehaviour {
 		dXmax *= 0.9f;
 		dYmax *= 0.9f;
 		dZmax *= 0.9f;
+
+
+		float tempMag = Input.acceleration.magnitude;
+		Debug.Log("DebugAccelAD: "+tempMag);
+	
+		if (tempMag > 2) {
+		//	if (player != null) {
+			//	Debug.Log("DebugAccelAD: Player is not null " + player);
+			Matrix4x4 m = Matrix4x4.Rotate(transform.rotation);
+
+			Vector4 v = m.GetColumn(2);
+			transform.position += new Vector3(v.x,v.y,v.z);
+		//	}
+
+			Debug.Log("DebugAccelAD: FIRED!!!!");
+		}
 	}
 }
 	

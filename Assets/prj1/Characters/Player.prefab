@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 114371060871203274}
   - component: {fileID: 114008825832475266}
   - component: {fileID: 114805258301078390}
-  - component: {fileID: 114401912317811092}
   - component: {fileID: 54814749538370684}
   m_Layer: 0
   m_Name: Player
@@ -685,17 +684,6 @@ MonoBehaviour:
     type: 2}
   bulletSpawn: {fileID: 4337216571260164}
   playerSpeed: 60
---- !u!114 &114401912317811092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1544633458247126}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 705fe2723c3e5b64fbcb37e5ce6c5cd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114663255581022316
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -190,6 +190,7 @@ a90e94673f50d2237c1b971c138660c6 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.ForcedReset
 57fde8e76fc7bce23deb0e799d336be7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.SmoothFollow
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GvrPointerManager
+1fe3c85ee3a090b7944f445b7419c760 Assembly-CSharp.dll:.PlayerMovement
 cfa93710d56cd4da2a3b2eec27bc1139 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.PlanarReflection
 cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenOverlay
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
@@ -312,4 +313,3 @@ b2945430dfd6bbdb5d77043b47bf85e7 Assembly-CSharp.dll:.GvrControllerReticleVisual
 d885ad79a6ef5bfe2ce10637aac0b8a0 Assembly-CSharp.dll:GoogleVR.VideoDemo.AutoPlayVideo
 a412f64ff4e4667098f82b7fa0bf56e2 Assembly-CSharp-firstpass.dll:UnityStandardAssets._2D.PlatformerCharacter2D
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerMovement
