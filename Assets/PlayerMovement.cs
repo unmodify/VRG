@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 	float dXmax,dYmax,dZmax;
 
 	public float playerSpeed = 10;
-	public GameObject player;
+	public GameObject player = null;
 
 	// Use this for initialization
 	void Start () {
@@ -54,18 +54,20 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		float tempMag = Input.acceleration.magnitude;
+		Debug.Log("DebugAccelAD:==================== ");
 		Debug.Log("DebugAccelAD: "+tempMag);
-	
-		if (tempMag > 2) {
-		//	if (player != null) {
-			//	Debug.Log("DebugAccelAD: Player is not null " + player);
-			Matrix4x4 m = Matrix4x4.Rotate(transform.rotation);
+		Matrix4x4 m = Matrix4x4.Rotate(transform.rotation);
+		Vector4 v = m.GetColumn(2);
+		//Debug.Log("DebugAccelAD2:" + v+"\t(p):"+GetComponentInParent<Transform>().position+"\tm:"+tempMag);
+		Debug.Log("DebugAccelAD2:" + v+"\t(p):"+player.transform.position+"\tm:"+tempMag);
 
-			Vector4 v = m.GetColumn(2);
-			transform.position += new Vector3(v.x,v.y,v.z);
+		if (tempMag >= 2) {
+		//	if (player != null) {
+			//Debug.Log("DebugAccelAD: Player is not null " + player);
+			player.transform.TransformDirection(new Vector3(v.x,v.y,v.z));
 		//	}
 
-			Debug.Log("DebugAccelAD: FIRED!!!!");
+			Debug.Log("DebugAccelAD2: FIRED!!!!");
 		}
 	}
 }
