@@ -4420,7 +4420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  player: {fileID: 1459204353}
+  player: {fileID: 432021358}
 --- !u!1001 &1286720168
 Prefab:
   m_ObjectHideFlags: 0

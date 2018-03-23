@@ -39,11 +39,11 @@ public class PlayerMovement : MonoBehaviour {
 		if (dZmin>aZ){
 			dZmin = aZ;
 		}
-		Debug.Log("DebugAccel0:"+aX+ "," +aY +","+ aZ);
+	//	Debug.Log("DebugAccel0:"+aX+ "," +aY +","+ aZ);
 		// show min max and delta
-		Debug.Log("DebugAccelA:"+dXmin + "," +dYmin +","+ dZmin);
-		Debug.Log("DebugAccelB:"+dXmax + "," +dYmax +","+ dZmax);
-		Debug.Log("DebugAccelC:"+(dXmax-dXmin) + "," +(dYmax-dYmin)+","+ (dZmax-dZmin));
+	//	Debug.Log("DebugAccelA:"+dXmin + "," +dYmin +","+ dZmin);
+	//	Debug.Log("DebugAccelB:"+dXmax + "," +dYmax +","+ dZmax);
+	//	Debug.Log("DebugAccelC:"+(dXmax-dXmin) + "," +(dYmax-dYmin)+","+ (dZmax-dZmin));
 		// reduce to 0 over time
 		dXmin *= 0.9f;
 		dYmin *= 0.9f;
@@ -55,20 +55,26 @@ public class PlayerMovement : MonoBehaviour {
 
 		float tempMag = Input.acceleration.magnitude;
 		Debug.Log("DebugAccelAD:==================== ");
-		Debug.Log("DebugAccelAD: "+tempMag);
+		//Debug.Log("DebugAccelAD: "+tempMag);
 		Matrix4x4 m = Matrix4x4.Rotate(transform.rotation);
 		Vector4 v = m.GetColumn(2);
 		//Debug.Log("DebugAccelAD2:" + v+"\t(p):"+GetComponentInParent<Transform>().position+"\tm:"+tempMag);
-		Debug.Log("DebugAccelAD2:" + v+"\t(p):"+player.transform.position+"\tm:"+tempMag);
+		//Debug.Log("DebugAccelAD2:" + v+"\t(p):"+player.transform.position+"\tm:"+tempMag);
 
 		if (tempMag >= 2) {
 		//	if (player != null) {
 			//Debug.Log("DebugAccelAD: Player is not null " + player);
-			player.transform.TransformDirection(new Vector3(v.x,v.y,v.z));
+			player.transform.position = player.transform.position+ new Vector3(v.x,v.y,v.z);
 		//	}
 
 			Debug.Log("DebugAccelAD2: FIRED!!!!");
 		}
+		if (Input.GetKeyDown(KeyCode.Space)){
+			//player.transform.position = player.transform.position+ new Vector3(1,0,0);
+			player.transform.position = player.transform.position+ new Vector3(v.x,v.y,v.z);
+			Debug.Log("DebugAccelAD2: FIRED2!!!!");
+		}
+			
 	}
 }
 	
