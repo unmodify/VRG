@@ -54,6 +54,7 @@
      <Compile Include="Assets\Billboard.cs" />
      <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\CameraLock.cs" />
+     <Compile Include="Assets\Center.cs" />
      <Compile Include="Assets\EnemySpawner.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
@@ -163,6 +164,7 @@
      <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\prj1\Scripts\Spin.cs" />
+     <Compile Include="Assets\SliderManager.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrController.shader" />

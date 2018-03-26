@@ -18,4 +18,12 @@ public class Spin : MonoBehaviour {
     public void flipSpin(){
         spinValue = -spinValue;
     }
+
+	public void OnPointerEnter(){
+		Debug.Log ("Enter");
+	}
+
+	public void OnPointerExit(){
+		Debug.Log ("Exit");
+	}
 }
