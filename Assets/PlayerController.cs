@@ -9,7 +9,7 @@ public class PlayerController : NetworkBehaviour{
 	public float playerSpeed;
     // Use this for initialization
     void Start () {
-        GetComponent<Rigidbody>().freezeRotation = true;
+       // GetComponent<Rigidbody>().freezeRotation = true;
 	}
 	
 	// Update is called once per frame

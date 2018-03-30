@@ -1,4 +1,4 @@
-WindowsStandalone
+Android
 SceneListBegin?
 Assets/testScene.unity
 SceneListEnd?
@@ -290,6 +290,7 @@ b7f557c19cce3b6f593e26edfe1ec859 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 8cb8cdceaad5d7c7a6bd95b641ccfae4 Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.GerstnerDisplace
 f4b175ffc1eeca85d2783436b4c764a7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.Explosive
+d287c519a9ca9bc488cafb92731e0210 Assembly-CSharp.dll:.HostSliderManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleVR.VideoDemo.VideoControlsManager
 81dc5af3744a08050494c77f5012051e Assembly-CSharp.dll:.GvrPointerGraphicRaycaster
 6746ad828d32ad6e5c07a63950fd4be6 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.WaterTile
@@ -313,7 +314,6 @@ b3432dfe180f02232d7612fb366593d3 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 e399fc54e753911801f12ac57c8fc414 Assembly-CSharp.dll:GoogleVR.HelloVR.HelloVRManager
 b2945430dfd6bbdb5d77043b47bf85e7 Assembly-CSharp.dll:.GvrControllerReticleVisual
 d885ad79a6ef5bfe2ce10637aac0b8a0 Assembly-CSharp.dll:GoogleVR.VideoDemo.AutoPlayVideo
+d287c519a9ca9bc488cafb92731e0210 Assembly-CSharp.dll:.ClientSliderManager
 a412f64ff4e4667098f82b7fa0bf56e2 Assembly-CSharp-firstpass.dll:UnityStandardAssets._2D.PlatformerCharacter2D
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-d287c519a9ca9bc488cafb92731e0210 Assembly-CSharp.dll:.HostSliderManager
-d287c519a9ca9bc488cafb92731e0210 Assembly-CSharp.dll:.ClientSliderManager
