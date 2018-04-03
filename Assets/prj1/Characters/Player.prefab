@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4337216571260164}
   m_Layer: 0
-  m_Name: bulletSpawnPoint
+  m_Name: Axe Left Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,6 +148,21 @@ GameObject:
   - component: {fileID: 4861560619993780}
   m_Layer: 0
   m_Name: Axe 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1665555490914378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4421241849197036}
+  m_Layer: 0
+  m_Name: Axe Right Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +271,7 @@ Transform:
   m_LocalScale: {x: 0.1975283, y: 0.34954736, z: 0.19752848}
   m_Children: []
   m_Father: {fileID: 4971024366466458}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4337216571260164
 Transform:
@@ -265,7 +280,20 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1343746194211664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 0.158, z: 1.11}
+  m_LocalPosition: {x: -0.07, y: 0.265, z: 1.11}
+  m_LocalScale: {x: 1, y: 1, z: 1.0358}
+  m_Children: []
+  m_Father: {fileID: 4971024366466458}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4421241849197036
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665555490914378}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.672, y: 0.345, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1.0357983}
   m_Children: []
   m_Father: {fileID: 4971024366466458}
@@ -312,6 +340,7 @@ Transform:
   m_Children:
   - {fileID: 4861560619993780}
   - {fileID: 4157278439804428}
+  - {fileID: 4421241849197036}
   - {fileID: 4337216571260164}
   - {fileID: 4335820279811178}
   - {fileID: 224581381499051630}
@@ -606,7 +635,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1544633458247126}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
@@ -666,8 +695,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1044522393004470, guid: 0076102456a203c43bad0a3dacd7e6e5,
     type: 2}
-  bulletSpawn: {fileID: 4337216571260164}
-  playerSpeed: 60
+  bulletSpawnRight: {fileID: 4421241849197036}
+  bulletSpawnLeft: {fileID: 4337216571260164}
+  playerSpeed: 10
+  z: 0
 --- !u!114 &114663255581022316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -904,7 +935,7 @@ RectTransform:
   m_Children:
   - {fileID: 224231883732319388}
   m_Father: {fileID: 4971024366466458}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
