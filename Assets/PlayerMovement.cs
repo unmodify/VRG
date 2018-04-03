@@ -20,7 +20,9 @@ public class PlayerMovement : MonoBehaviour {
 
 		Debug.Log ("Player Rotation Before" + player.transform.rotation);
 		Debug.Log ("Camera Rotation Before" + transform.rotation);
-		player.transform.rotation = Quaternion.Euler(new Vector3 (player.transform.rotation.x, transform.rotation.y, player.transform.rotation.z));
+        //player.transform.rotation = Quaternion.Euler(new Vector3 (player.transform.rotation.x, transform.rotation.y/(2.0f*Mathf.PI)*360.0f, player.transform.rotation.z));
+        player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, transform.rotation.y*180.0f, player.transform.rotation.z));
+        transform.position = player.transform.position+player.transform.up*0.541f;// - player.transform.forward * 3.0f;   // set our position behind player
 		Debug.Log ("Player Rotation After" + player.transform.rotation);
 		Debug.Log ("Camera Rotation After" + transform.rotation);
 
