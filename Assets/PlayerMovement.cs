@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : NetworkBehaviour {
 	float dXmin,dYmin,dZmin;
 	float dXmax,dYmax,dZmax;
 
@@ -15,6 +16,10 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Update(){
+		if (!isLocalPlayer)
+		{
+			//return;
+		}
 		player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, transform.eulerAngles.y/**180.0f*/, player.transform.rotation.z));
 	//	transform.rotation = new Vector3 (transform.rotation.x, transform.rotation.y * 180.0f, transform.rotation.z);
 	}
@@ -23,7 +28,10 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		//transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
-
+		if (!isLocalPlayer)
+		{
+			//return;
+		}
 		Debug.Log ("Player Rotation Before" + player.transform.rotation);
 		Debug.Log ("Camera Rotation Before" + transform.rotation);
         //player.transform.rotation = Quaternion.Euler(new Vector3 (player.transform.rotation.x, transform.rotation.y/(2.0f*Mathf.PI)*360.0f, player.transform.rotation.z));

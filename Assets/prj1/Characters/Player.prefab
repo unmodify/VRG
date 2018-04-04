@@ -695,6 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1044522393004470, guid: 0076102456a203c43bad0a3dacd7e6e5,
     type: 2}
+  axePrefab: {fileID: 1542365121329262, guid: 242ba2e947efa304f9704df3ad9b1121, type: 2}
   bulletSpawnRight: {fileID: 4421241849197036}
   bulletSpawnLeft: {fileID: 4337216571260164}
   playerSpeed: 10

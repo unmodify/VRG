@@ -17,10 +17,10 @@ public class PlayerController : NetworkBehaviour{
 	
 	// Update is called once per frame
 	void Update () {
-        //if (!isLocalPlayer)
-        //{
+        if (!isLocalPlayer)
+        {
         //    return;
-        //}
+        }
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         z = Input.GetAxis("Vertical") * Time.deltaTime * playerSpeed;
 
@@ -75,6 +75,7 @@ public class PlayerController : NetworkBehaviour{
     public override void OnStartLocalPlayer()
     {
         GetComponent<MeshRenderer>().material.color = Color.blue;
+		Camera.allCameras [0].GetComponent<PlayerMovement> ().player = gameObject;
     }
 
     
