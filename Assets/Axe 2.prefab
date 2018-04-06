@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4751657469898620}
   - component: {fileID: 54966810867156260}
   - component: {fileID: 114912308887538062}
+  - component: {fileID: 114134718885883298}
+  - component: {fileID: 114190867165375742}
   m_Layer: 0
   m_Name: Axe 2
   m_TagString: Untagged
@@ -299,6 +301,59 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.005802924, y: 0.015061454, z: 0.035319876}
   m_Center: {x: 5.4130016e-16, y: 0.013848658, z: -0.0008637816}
+--- !u!114 &114134718885883298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044522393004470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 118
+    i2: 16
+    i3: 36
+    i4: 86
+    i5: 162
+    i6: 3
+    i7: 196
+    i8: 59
+    i9: 173
+    i10: 10
+    i11: 61
+    i12: 172
+    i13: 215
+    i14: 230
+    i15: 229
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114190867165375742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044522393004470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.04347826
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114912308887538062
 MonoBehaviour:
   m_ObjectHideFlags: 1

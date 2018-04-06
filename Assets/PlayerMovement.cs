@@ -9,6 +9,7 @@ public class PlayerMovement : NetworkBehaviour {
 
 	public float playerSpeed = 10;
 	public GameObject player = null;
+    public bool areWeLocalPlayer = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,27 +17,29 @@ public class PlayerMovement : NetworkBehaviour {
 	}
 
 	void Update(){
-		if (!isLocalPlayer)
+        Debug.Log("PM:up:" + areWeLocalPlayer);
+		if (!areWeLocalPlayer)
 		{
-			//return;
+			return;
 		}
-		player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, transform.eulerAngles.y/**180.0f*/, player.transform.rotation.z));
+		player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, transform.GetChild(0).eulerAngles.y/**180.0f*/, player.transform.rotation.z));
 	//	transform.rotation = new Vector3 (transform.rotation.x, transform.rotation.y * 180.0f, transform.rotation.z);
 	}
 
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		//transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
-		if (!isLocalPlayer)
+        Debug.Log("PM:LU:" + areWeLocalPlayer);
+        //transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
+        if (!areWeLocalPlayer)
 		{
-			//return;
+			return;
 		}
 		Debug.Log ("Player Rotation Before" + player.transform.rotation);
 		Debug.Log ("Camera Rotation Before" + transform.rotation);
         //player.transform.rotation = Quaternion.Euler(new Vector3 (player.transform.rotation.x, transform.rotation.y/(2.0f*Mathf.PI)*360.0f, player.transform.rotation.z));
      
-        transform.position = player.transform.position+player.transform.up*0.541f;// - player.transform.forward * 3.0f;   // set our position behind player
+        transform.GetChild(0).position = player.transform.position+player.transform.up*0.541f;// - player.transform.forward * 3.0f;   // set our position behind player
 		Debug.Log ("Player Rotation After" + player.transform.rotation);
 		Debug.Log ("Camera Rotation After" + transform.rotation);
 
