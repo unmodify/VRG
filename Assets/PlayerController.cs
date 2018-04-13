@@ -13,13 +13,18 @@ public class PlayerController : NetworkBehaviour{
     bool fire1Flag = false;
     bool fire2Flag = false;
     GameObject camParent = null;
-    
+	Animator animate;
+
+
+
     // Use this for initialization
     void Start () {
         Debug.Log("Cams:" + Camera.allCameras.Length);
         // get the head into each player
         camParent = GameObject.Find("Head");
-        Debug.Log("CamP:" + camParent+"\tcamera:"+ Camera.allCameras[0]);        
+        Debug.Log("CamP:" + camParent+"\tcamera:"+ Camera.allCameras[0]);       
+
+		animate = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +37,13 @@ public class PlayerController : NetworkBehaviour{
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * playerSpeed;
         
         z = Input.GetAxis("Vertical") * Time.deltaTime * playerSpeed;
+
+
+		if (x != 0 || z != 0) {
+			animate.SetBool ("Walking", true);
+		} else {
+			animate.SetBool ("Walking", false);
+		}
 
         //transform.Rotate(0, x, 0);
         //transform.Translate(0, 0, z);
