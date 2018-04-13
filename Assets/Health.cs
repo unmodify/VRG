@@ -14,7 +14,14 @@ public class Health : NetworkBehaviour {
 
 	public RectTransform healthBar;
 
-	public void TakeDamage(int amount)
+    public void Start()
+    {
+        if (transform.name.Contains("Player"))
+        {
+            destroyOnDeath = false;
+        }
+    }
+    public void TakeDamage(int amount)
 	{
 		if (!isServer)
 			return;

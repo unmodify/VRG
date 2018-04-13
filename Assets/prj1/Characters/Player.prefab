@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a06e4d03adfe84fa296d1b1c5fd4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1044522393004470, guid: 0076102456a203c43bad0a3dacd7e6e5,
+  bulletPrefab: {fileID: 1908100375921304, guid: 48c69cbcba601354fbbf073edb93c36b,
     type: 2}
   axePrefab: {fileID: 1542365121329262, guid: 242ba2e947efa304f9704df3ad9b1121, type: 2}
   bulletSpawnRight: {fileID: 4421241849197036}
