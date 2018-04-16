@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\slap.cs">
     <Files>
-      <File FileName="Assets\PlayerController.cs" Line="78" Column="31" />
+      <File FileName="Assets\PlayerController.cs" Line="177" Column="41" />
       <File FileName="Assets\Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\slap.cs" Line="14" Column="3" />
       <File FileName="Assets\PlayerMovement.cs" Line="42" Column="3" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

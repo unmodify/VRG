@@ -14,6 +14,7 @@ public class PlayerController : NetworkBehaviour{
     bool fire2Flag = false;
     GameObject camParent = null;
 	Animator animate;
+	public bool handLeftEmpty, handRightEmpty;
 
 
 
@@ -65,8 +66,11 @@ public class PlayerController : NetworkBehaviour{
             //    bulletSpawnRight.rotation, 
             //    125f * bulletSpawnRight.GetComponent<Transform>().right,
             //    transform.forward * 6 + (transform.forward * Mathf.Max(z, 0) * 30f));
-            CmdFireRight();
+			if (!handRightEmpty) {
+				CmdFireRight ();
+			}
             fire1Flag = true;
+			animate.SetTrigger("Punch Right");
         }
         if (!Input.GetButton("Fire1"))
         {
@@ -77,18 +81,24 @@ public class PlayerController : NetworkBehaviour{
 		{
             Debug.Log("netID:pFL:" + netId.ToString());
             CmdFireLeft();
+			animate.SetTrigger("Punch Left");
 		}
         if (Input.GetButton("Fire2") && !fire2Flag)
         {
             Debug.Log("netID:pFL:" + netId.ToString());
-            CmdFireLeft();
+			if (!handLeftEmpty) {
+				CmdFireLeft ();
+			}
             fire2Flag = true;
+			animate.SetTrigger("Punch Right");
         }
         
         if (!Input.GetButton("Fire2"))
         {
             fire2Flag = false;
         }
+
+
        // Debug.Log("myBs:" + Input.GetButton("Fire1") + "," + Input.GetButton("Fire2"));
     }
 
@@ -164,6 +174,7 @@ public class PlayerController : NetworkBehaviour{
     public override void OnStartLocalPlayer()
     {
        transform.GetComponent<MeshRenderer>().material.color = Color.blue; // change sphere
+		handLeftEmpty = handRightEmpty = true;
     }
 
     

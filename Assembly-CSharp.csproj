@@ -169,6 +169,7 @@
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\prj1\Scripts\Spin.cs" />
      <Compile Include="Assets\SetIp.cs" />
+     <Compile Include="Assets\slap.cs" />
      <Compile Include="Assets\SliderManager.cs" />
      <Compile Include="Assets\Spawn.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
