@@ -57,7 +57,7 @@ public class PlayerController : NetworkBehaviour{
         if ((Input.GetKeyDown(KeyCode.Space)))//||Input.GetButton("Fire1")))
         {
             Debug.Log("netID:pFR:" + netId.ToString());
-            CmdFireRight();
+        //    CmdFireRight();
         }
         if (Input.GetButton("Fire1") && !fire1Flag)
         {
@@ -80,14 +80,14 @@ public class PlayerController : NetworkBehaviour{
         if ((Input.GetKeyDown(KeyCode.B)))// || Input.GetButton("Fire2")))
 		{
             Debug.Log("netID:pFL:" + netId.ToString());
-            CmdFireLeft();
+          //  CmdFireLeft();
 			animate.SetTrigger("Punch Left");
 		}
         if (Input.GetButton("Fire2") && !fire2Flag)
         {
             Debug.Log("netID:pFL:" + netId.ToString());
 			if (!handLeftEmpty) {
-				CmdFireLeft ();
+			//	CmdFireLeft ();
 			}
             fire2Flag = true;
 			animate.SetTrigger("Punch Right");
