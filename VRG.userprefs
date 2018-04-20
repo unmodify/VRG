@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\slap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EnemySpawner.cs">
     <Files>
-      <File FileName="Assets\PlayerController.cs" Line="177" Column="41" />
-      <File FileName="Assets\Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets\slap.cs" Line="14" Column="3" />
-      <File FileName="Assets\PlayerMovement.cs" Line="42" Column="3" NotebookId="1" />
+      <File FileName="Assets\PlayerController.cs" Line="169" Column="13" />
+      <File FileName="Assets\Bullet.cs" Line="20" Column="1" />
+      <File FileName="Assets\slap.cs" Line="17" Column="1" />
+      <File FileName="Assets\EnemySpawner.cs" Line="11" Column="22" />
+      <File FileName="Assets\PlayerMovement.cs" Line="40" Column="22" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

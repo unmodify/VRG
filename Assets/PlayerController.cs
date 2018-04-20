@@ -57,8 +57,10 @@ public class PlayerController : NetworkBehaviour{
         if ((Input.GetKeyDown(KeyCode.Space)))//||Input.GetButton("Fire1")))
         {
             Debug.Log("netID:pFR:" + netId.ToString());
-        //    CmdFireRight();
+			//CmdFireRight();
+			CmdFireLeft();
         }
+
         if (Input.GetButton("Fire1") && !fire1Flag)
         {
             Debug.Log("netID:pFR:" + netId.ToString());
@@ -162,9 +164,9 @@ public class PlayerController : NetworkBehaviour{
 			bulletSpawnLeft.rotation);
         //if (isLocalPlayer)
         //{
-            bullet.GetComponent<Rigidbody>().angularVelocity = 125f * bulletSpawnLeft.GetComponent<Transform>().right;
+            //bullet.GetComponent<Rigidbody>().angularVelocity = 125f * bulletSpawnLeft.GetComponent<Transform>().right;
             // Add velocity to the bullet
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6 + GetComponent<Transform>().up * 3f + (transform.forward * Mathf.Max(z, 0) * 30f);
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
         //}		
 		NetworkServer.Spawn(bullet);
 		// Destroy the bullet after 2 seconds
