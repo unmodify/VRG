@@ -13,15 +13,24 @@ public class PlayerController : NetworkBehaviour{
     bool fire1Flag = false;
     bool fire2Flag = false;
     GameObject camParent = null;
+<<<<<<< HEAD
     public Animator handLeft = null;
     public AnimatorStateInfo handAnimState;
+=======
+	Animator animate;
+	public bool handLeftEmpty, handRightEmpty;
+
+
+>>>>>>> 05a6d1586926596c6c98c75914af06e5196c012e
 
     // Use this for initialization
     void Start () {
         Debug.Log("Cams:" + Camera.allCameras.Length);
         // get the head into each player
         camParent = GameObject.Find("Head");
-        Debug.Log("CamP:" + camParent+"\tcamera:"+ Camera.allCameras[0]);        
+        Debug.Log("CamP:" + camParent+"\tcamera:"+ Camera.allCameras[0]);       
+
+		animate = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +44,13 @@ public class PlayerController : NetworkBehaviour{
         
         z = Input.GetAxis("Vertical") * Time.deltaTime * playerSpeed;
 
+
+		if (x != 0 || z != 0) {
+			animate.SetBool ("Walking", true);
+		} else {
+			animate.SetBool ("Walking", false);
+		}
+
         //transform.Rotate(0, x, 0);
         //transform.Translate(0, 0, z);
         // get rotation from the camera in the scene and apply to the player model
@@ -45,10 +61,17 @@ public class PlayerController : NetworkBehaviour{
         // handle shot inputs
         if ((Input.GetKeyDown(KeyCode.Space)))//||Input.GetButton("Fire1")))
         {
+<<<<<<< HEAD
             Debug.Log("netID:pFR:TRIGGER!!!" + netId.ToString());
             CmdFireRight();
             handLeft.SetTrigger("punchOn");
+=======
+            Debug.Log("netID:pFR:" + netId.ToString());
+			//CmdFireRight();
+			CmdFireLeft();
+>>>>>>> 05a6d1586926596c6c98c75914af06e5196c012e
         }
+
         if (Input.GetButton("Fire1") && !fire1Flag)
         {
             Debug.Log("netID:pFR:TRIGGER!!!" + netId.ToString());
@@ -56,9 +79,16 @@ public class PlayerController : NetworkBehaviour{
             //    bulletSpawnRight.rotation, 
             //    125f * bulletSpawnRight.GetComponent<Transform>().right,
             //    transform.forward * 6 + (transform.forward * Mathf.Max(z, 0) * 30f));
+<<<<<<< HEAD
             CmdFireRight();
             handLeft.SetTrigger("punchOn");
+=======
+			if (!handRightEmpty) {
+				CmdFireRight ();
+			}
+>>>>>>> 05a6d1586926596c6c98c75914af06e5196c012e
             fire1Flag = true;
+			animate.SetTrigger("Punch Right");
         }
         if (!Input.GetButton("Fire1"))
         {
@@ -68,23 +98,41 @@ public class PlayerController : NetworkBehaviour{
         if ((Input.GetKeyDown(KeyCode.B)))// || Input.GetButton("Fire2")))
 		{
             Debug.Log("netID:pFL:" + netId.ToString());
+<<<<<<< HEAD
             //CmdFireLeft();
             handLeft.SetTrigger("punchOn");
+=======
+          //  CmdFireLeft();
+			animate.SetTrigger("Punch Left");
+>>>>>>> 05a6d1586926596c6c98c75914af06e5196c012e
 		}
         if (Input.GetButton("Fire2") && !fire2Flag)
         {
             Debug.Log("netID:pFL:" + netId.ToString());
+<<<<<<< HEAD
             //CmdFireLeft();
+=======
+			if (!handLeftEmpty) {
+			//	CmdFireLeft ();
+			}
+>>>>>>> 05a6d1586926596c6c98c75914af06e5196c012e
             fire2Flag = true;
+			animate.SetTrigger("Punch Right");
         }
         
         if (!Input.GetButton("Fire2"))
         {
             fire2Flag = false;
         }
+<<<<<<< HEAD
         // Debug.Log("myBs:" + Input.GetButton("Fire1") + "," + Input.GetButton("Fire2"));
         // print anim state info
         Debug.Log("HandAnim:" + handAnimState.fullPathHash + "::" + handAnimState.normalizedTime);
+=======
+
+
+       // Debug.Log("myBs:" + Input.GetButton("Fire1") + "," + Input.GetButton("Fire2"));
+>>>>>>> 05a6d1586926596c6c98c75914af06e5196c012e
     }
 
     private void LateUpdate()
@@ -147,9 +195,9 @@ public class PlayerController : NetworkBehaviour{
 			bulletSpawnLeft.rotation);
         //if (isLocalPlayer)
         //{
-            bullet.GetComponent<Rigidbody>().angularVelocity = 125f * bulletSpawnLeft.GetComponent<Transform>().right;
+            //bullet.GetComponent<Rigidbody>().angularVelocity = 125f * bulletSpawnLeft.GetComponent<Transform>().right;
             // Add velocity to the bullet
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6 + GetComponent<Transform>().up * 3f + (transform.forward * Mathf.Max(z, 0) * 30f);
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 36;
         //}		
 		NetworkServer.Spawn(bullet);
 		// Destroy the bullet after 2 seconds
@@ -158,9 +206,17 @@ public class PlayerController : NetworkBehaviour{
 
     public override void OnStartLocalPlayer()
     {
+<<<<<<< HEAD
         transform.GetComponent<MeshRenderer>().material.color = Color.blue; // change sphere
         handLeft = transform.GetChild(4).GetComponent<Animator>();
         Debug.Log("Hand:" + handLeft);
         handAnimState = handLeft.GetCurrentAnimatorStateInfo(0);
     }    
+=======
+       transform.GetComponent<MeshRenderer>().material.color = Color.blue; // change sphere
+		handLeftEmpty = handRightEmpty = true;
+    }
+
+    
+>>>>>>> 05a6d1586926596c6c98c75914af06e5196c012e
 }

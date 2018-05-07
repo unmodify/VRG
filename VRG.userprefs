@@ -2,30 +2,20 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerController.cs">
     <Files>
-      <File FileName="Assets\PlayerController.cs" Line="78" Column="77" />
-      <File FileName="Assets\Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets\PlayerMovement.cs" Line="42" Column="3" NotebookId="1" />
+      <File FileName="Assets\PlayerController.cs" Line="33" Column="1" />
+      <File FileName="Assets\Bullet.cs" Line="20" Column="4" />
+      <File FileName="Assets\EnemySpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\slap.cs" Line="6" Column="1" />
+      <File FileName="Assets\PlayerMovement.cs" Line="27" Column="3" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="VRG" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="PlayerController.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="VRG" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\APriest\Documents\VRG\Assets\SliderManager.cs" line="33" column="1" />
+      <Breakpoint file="C:\Users\APriest\Documents\VRG\Assets\slap.cs" line="13" column="1" />
+      <Breakpoint file="C:\Users\APriest\Documents\VRG\Assets\slap.cs" line="24" column="1" />
+      <Breakpoint file="C:\Users\APriest\Documents\VRG\Assets\PlayerMovement.cs" line="21" column="1" />
+      <Breakpoint file="C:\Users\APriest\Documents\VRG\Assets\slap.cs" line="6" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

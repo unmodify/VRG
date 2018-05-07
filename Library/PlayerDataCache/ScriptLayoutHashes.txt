@@ -236,6 +236,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 21984f001d5a114ee9fbf62810ee8eb7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.SpecularLighting
 2dbfd4f7836c7f6a79e17be5f4bf7969 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.WaypointCircuit
 48718eef89369acea1a78774e6908099 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Cameras.TargetFieldOfView
+fce6d1b88f041e0153fdb0355d894ef6 Assembly-CSharp.dll:.slap
 2c62b9ae79b8b54dd7b55fa7d311452b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.Water
 1c952386af3ef6bd3c90a34c4fd12f6b Assembly-CSharp.dll:GoogleVR.HelloVR.ObjectController
 4aadab9e3e4d34f6e069833451e815bb Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.CreaseShading
@@ -290,7 +291,7 @@ a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 b7f557c19cce3b6f593e26edfe1ec859 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Vehicles.Ball.Ball
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleVR.VideoDemo.ScrubberEvents
-ac69240d6e544de184c8f52749a4d6f7 Assembly-CSharp.dll:.PlayerController
+48359f6c3fd2fa774b8f0c13ddf49745 Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.GerstnerDisplace
 f4b175ffc1eeca85d2783436b4c764a7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.Explosive
 d287c519a9ca9bc488cafb92731e0210 Assembly-CSharp.dll:.HostSliderManager

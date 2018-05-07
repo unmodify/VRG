@@ -21,6 +21,13 @@ public class Bullet : MonoBehaviour {
         }
 
         //Destroy(gameObject);
+		gameObject.transform.SetParent (theCollision.gameObject.transform);
+		GetComponent<Rigidbody>().isKinematic = true;
+		if (GetComponent<CapsuleCollider> () != null) {
+			GetComponent<CapsuleCollider> ().enabled = false;
+		}
+		//Vector3 childPos = transform.position - theCollision.transform.position;
+
     }
 
 // Use this for initialization
