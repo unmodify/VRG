@@ -13,10 +13,13 @@ public class Bullet : MonoBehaviour {
             health.TakeDamage(10);
         }
         //Destroy(gameObject);
+		gameObject.transform.SetParent (theCollision.gameObject.transform);
 		GetComponent<Rigidbody>().isKinematic = true;
-		GetComponent<Collider> ().enabled = false;
-		Vector3 childPos = transform.position - theCollision.transform.position;
-		transform.SetParent (theCollision.transform);
+		if (GetComponent<CapsuleCollider> () != null) {
+			GetComponent<CapsuleCollider> ().enabled = false;
+		}
+		//Vector3 childPos = transform.position - theCollision.transform.position;
+
     }
 
 // Use this for initialization

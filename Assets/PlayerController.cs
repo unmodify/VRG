@@ -166,7 +166,7 @@ public class PlayerController : NetworkBehaviour{
         //{
             //bullet.GetComponent<Rigidbody>().angularVelocity = 125f * bulletSpawnLeft.GetComponent<Transform>().right;
             // Add velocity to the bullet
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 36;
         //}		
 		NetworkServer.Spawn(bullet);
 		// Destroy the bullet after 2 seconds
