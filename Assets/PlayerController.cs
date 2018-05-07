@@ -13,7 +13,9 @@ public class PlayerController : NetworkBehaviour{
     bool fire1Flag = false;
     bool fire2Flag = false;
     GameObject camParent = null;
-    
+    public Animator handLeft = null;
+    public AnimatorStateInfo handAnimState;
+
     // Use this for initialization
     void Start () {
         Debug.Log("Cams:" + Camera.allCameras.Length);
@@ -43,17 +45,19 @@ public class PlayerController : NetworkBehaviour{
         // handle shot inputs
         if ((Input.GetKeyDown(KeyCode.Space)))//||Input.GetButton("Fire1")))
         {
-            Debug.Log("netID:pFR:" + netId.ToString());
+            Debug.Log("netID:pFR:TRIGGER!!!" + netId.ToString());
             CmdFireRight();
+            handLeft.SetTrigger("punchOn");
         }
         if (Input.GetButton("Fire1") && !fire1Flag)
         {
-            Debug.Log("netID:pFR:" + netId.ToString());
+            Debug.Log("netID:pFR:TRIGGER!!!" + netId.ToString());
             //RpcFireAxe(bulletSpawnRight.position, 
             //    bulletSpawnRight.rotation, 
             //    125f * bulletSpawnRight.GetComponent<Transform>().right,
             //    transform.forward * 6 + (transform.forward * Mathf.Max(z, 0) * 30f));
             CmdFireRight();
+            handLeft.SetTrigger("punchOn");
             fire1Flag = true;
         }
         if (!Input.GetButton("Fire1"))
@@ -64,12 +68,13 @@ public class PlayerController : NetworkBehaviour{
         if ((Input.GetKeyDown(KeyCode.B)))// || Input.GetButton("Fire2")))
 		{
             Debug.Log("netID:pFL:" + netId.ToString());
-            CmdFireLeft();
+            //CmdFireLeft();
+            handLeft.SetTrigger("punchOn");
 		}
         if (Input.GetButton("Fire2") && !fire2Flag)
         {
             Debug.Log("netID:pFL:" + netId.ToString());
-            CmdFireLeft();
+            //CmdFireLeft();
             fire2Flag = true;
         }
         
@@ -77,7 +82,9 @@ public class PlayerController : NetworkBehaviour{
         {
             fire2Flag = false;
         }
-       // Debug.Log("myBs:" + Input.GetButton("Fire1") + "," + Input.GetButton("Fire2"));
+        // Debug.Log("myBs:" + Input.GetButton("Fire1") + "," + Input.GetButton("Fire2"));
+        // print anim state info
+        Debug.Log("HandAnim:" + handAnimState.fullPathHash + "::" + handAnimState.normalizedTime);
     }
 
     private void LateUpdate()
@@ -87,7 +94,7 @@ public class PlayerController : NetworkBehaviour{
             return;
         }
         // update camparent to be at players position
-        camParent.GetComponent<Transform>().position = transform.position + transform.up * 0.541f;// - player.transform.forward * 3.0f;   // set our position behind player
+        camParent.GetComponent<Transform>().position = transform.position + transform.up * 0.541f;// - transform.forward * 2.0f;   // set our position behind player
         //	
     }
 
@@ -120,8 +127,8 @@ public class PlayerController : NetworkBehaviour{
             bulletSpawnRight.rotation);
         //if (isLocalPlayer)
         //{
-            bullet.GetComponent<Rigidbody>().angularVelocity = 125f * bulletSpawnRight.GetComponent<Transform>().right;
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6 + (transform.forward * Mathf.Max(z, 0) * 30f);
+            //bullet.GetComponent<Rigidbody>().angularVelocity = 125f * bulletSpawnRight.GetComponent<Transform>().right;
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60 + (transform.forward * Mathf.Max(z, 0) * 30f);
         //}
         // Add velocity to the bullet
         NetworkServer.Spawn(bullet);
@@ -151,8 +158,9 @@ public class PlayerController : NetworkBehaviour{
 
     public override void OnStartLocalPlayer()
     {
-       transform.GetComponent<MeshRenderer>().material.color = Color.blue; // change sphere
-    }
-
-    
+        transform.GetComponent<MeshRenderer>().material.color = Color.blue; // change sphere
+        handLeft = transform.GetChild(4).GetComponent<Animator>();
+        Debug.Log("Hand:" + handLeft);
+        handAnimState = handLeft.GetCurrentAnimatorStateInfo(0);
+    }    
 }

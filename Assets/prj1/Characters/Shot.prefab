@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4346221538186894}
   - component: {fileID: 33012311171757740}
-  - component: {fileID: 135199812164465956}
   - component: {fileID: 23849888833892908}
   - component: {fileID: 54410415820427976}
   - component: {fileID: 114624279521490388}
   - component: {fileID: 114264182199850426}
   - component: {fileID: 114031882827541746}
+  - component: {fileID: 136627371127995352}
   m_Layer: 0
   m_Name: Shot
   m_TagString: Untagged
@@ -40,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1542365121329262}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.95, y: -0.85, z: 5.002}
-  m_LocalScale: {x: 0.90911627, y: 0.15694557, z: 0.16121656}
+  m_LocalPosition: {x: -4.59135, y: -1.96, z: -3.5688868}
+  m_LocalScale: {x: 0.1612166, y: 0.16, z: 0.9012166}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -166,8 +166,8 @@ MonoBehaviour:
     i15: 33
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
---- !u!135 &135199812164465956
-SphereCollider:
+--- !u!136 &136627371127995352
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -175,6 +175,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.5000001
+  m_Height: 0.92
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}

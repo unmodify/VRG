@@ -1,0 +1,4 @@
+NOTES:
+jump
+kick in a direction with unarmed strike
+forward shot matches view

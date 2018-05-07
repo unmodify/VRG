@@ -303,6 +303,7 @@
     <Compile Include="Assets\CameraLock.cs" />
     <Compile Include="Assets\Center.cs" />
     <Compile Include="Assets\ClientSliderManager.cs" />
+    <Compile Include="Assets\done.cs" />
     <Compile Include="Assets\EnemySpawner.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
@@ -415,6 +416,7 @@
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\prj1\Scripts\Spin.cs" />
     <Compile Include="Assets\SetIp.cs" />
+    <Compile Include="Assets\shooter.cs" />
     <Compile Include="Assets\SliderManager.cs" />
     <Compile Include="Assets\Spawn.cs" />
   </ItemGroup>

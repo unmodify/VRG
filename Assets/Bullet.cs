@@ -12,6 +12,14 @@ public class Bullet : MonoBehaviour {
         {
             health.TakeDamage(10);
         }
+        Debug.Log("col:" + theCollision.gameObject.name);
+        gameObject.transform.SetParent(theCollision.gameObject.transform);
+        GetComponent<Rigidbody>().isKinematic = true;
+        if (GetComponent<CapsuleCollider>() != null)
+        {
+            GetComponent<CapsuleCollider>().enabled = false;
+        }
+
         //Destroy(gameObject);
     }
 
